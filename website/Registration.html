@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/fp_reset.css" rel="stylesheet" />
+  <link href="css/fp_nav.css" rel="stylesheet" />
+  <link href="css/fp_sign_up_button.css" rel="stylesheet" />
+  <link href="css/fp_form.css" rel="stylesheet" />
+  <link href="css/fp_print.css" rel="stylesheet" media="print" />
+  <script src="scripts/fp_sign_up_button.js" defer></script>
+  <script src="scripts/fp_mini_menu.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <img id="buckeye" src="images/fp_buckeye.png" alt="" />
+    <nav class="navbar-menu">
+
+      <!-- Menu normal -->
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./HikingTrails.html">Hiking Trails</a></li>
+        <li><a href="./Equipment.html">Equipment and Pricing</a></li>
+        <li><a href="./LocalFauna.html">Local Fauna</a></li>
+        <li><a href="./Registration.html">Hiking Registration</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button class="navbar-toggle" type="button">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+
+    <!-- Mini Menu -->
+    <nav class="navbar-mini-menu">
+      <ul class="mini-menu-options">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./HikingTrails.html">Hiking Trails</a></li>
+        <li><a href="./Equipment.html">Equipment and Pricing</a></li>
+        <li><a href="./LocalFauna.html">Local Fauna</a></li>
+        <li><a href="./Registration.html">Hiking Registration</a></li>
+      </ul>
+    </nav>
+
+    <button id="newsletter-btn">Sign Up for Newsletter</button>
+
+    <!--NewsLetter Button-->
+    <div class="newsletter-form-wrapper">
+      <button id="newsletter-close-btn">&times;</button>
+      <form id="newsletter-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+    <p> You can also print this form out instead of filling it out online.</p>
+
+
+  </header>
+  <h1>Hiking Event Registration Form</h1>
+  <form action="submit.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="regname" name="regname" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="regemail" name="regemail" required><br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="participants">Number of Participants:</label>
+    <select id="participants" name="participants">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br><br>
+
+    <label for="date">Event Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="special-requests">Special Requests or Accommodations:</label>
+    <textarea id="special-requests" name="special-requests" rows="4" cols="50"></textarea><br><br>
+
+    <h2>Emergency Contact Information:</h2>
+    <label for="emergency-name">Name:</label>
+    <input type="text" id="emergency-name" name="emergency-name" required><br><br>
+
+    <label for="emergency-relationship">Relationship:</label>
+    <input type="text" id="emergency-relationship" name="emergency-relationship" required><br><br>
+
+    <label for="emergency-phone">Phone:</label>
+    <input type="tel" id="emergency-phone" name="emergency-phone" required><br><br>
+
+    <h2>Liability Waiver Agreement:</h2>
+    <label for="waiver">By checking this box, I acknowledge that hiking can be a dangerous activity and that I am
+      participating in this event at my own risk. I release the event organizers and their affiliates from any liability
+      for personal injury or property damage that may occur during the event.</label>
+    <input type="checkbox" id="waiver" name="waiver" required><br><br>
+
+    <h2>How did you hear about us?</h2>
+    <label><input type="radio" name="referral" value="friend">Friend</label><br>
+    <label><input type="radio" name="referral" value="website">Website</label><br>
+    <label><input type="radio" name="referral" value="social-media">Social Media</label><br><br>
+
+    <h2>Choose any additional services:</h2>
+    <label><input type="checkbox" name="services[]" value="rental-equipment">Rental equipment</label><br>
+    <label><input type="checkbox" name="services[]" value="transportation">Transportation</label><br>
+    <label><input type="checkbox" name="services[]" value="guided-tour">Guided tour</label><br><br>
+
+
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </form>
+
+  <footer>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.newsletter-form-wrapper {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+  background-color: rgb(8, 120, 120);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.newsletter-form-wrapper form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-form-wrapper label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.newsletter-form-wrapper input[type="text"],
+.newsletter-form-wrapper input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter-form-wrapper input[type="submit"] {
+  background-color: rgb(122, 73, 0);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-form-wrapper input[type="submit"]:hover {
+  background-color: rgb(2, 114, 2);
+}
+
+#newsletter-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#newsletter-btn {
+  border-radius: 10px;
+  background-color: #4285f4;
+  color: #fff;
+}
+
+#newsletter-btn:hover {
+  transform: scale(1.1);
+  background-color: rgb(8, 120, 120);
+}
+
+@media only screen and (max-width: 768px) {
+  .newsletter-form-wrapper {
+    position: relative;
+  }
+}

@@ -1,0 +1,63 @@
+.quotes-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  grid-template-rows: repeat(1, 1fr);
+  gap: 25px;
+  align-items: baseline;
+  text-align: start;
+  padding: 325px;
+  margin-top: -500px;
+  margin-left: -250px;
+}
+
+blockquote {
+  border-left: 5px solid #555;
+  min-width: 200px;
+}
+
+blockquote p {
+  margin: 5px;
+  font-style: italic;
+  color: white;
+}
+
+blockquote cite {
+  color: rgb(3, 197, 197);
+  text-align: left;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/** Mobile Design */
+@media screen and (max-width: 600px) {
+  .quotes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    padding: 200px;
+    padding-top: 500px;
+  }
+
+  blockquote {
+    border-left: 5px solid #555;
+    padding-left: 100px;
+  }
+
+  blockquote p {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}

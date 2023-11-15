@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Local Flora</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/fp_reset.css" rel="stylesheet" />
+  <link href="css/fp_nav.css" rel="stylesheet" />
+  <link href="css/fp_table.css" rel="stylesheet" />
+  <link href="css/fp_sign_up_button.css" rel="stylesheet" />
+  <link href="css/fp_form.css" rel="stylesheet" />
+  <script src="scripts/fp_sign_up_button.js" defer></script>
+  <script src="scripts/fp_mini_menu.js" defer></script>
+
+</head>
+
+
+<body>
+  <header>
+    <img id="buckeye" src="images/fp_buckeye.png" alt="" />
+    <nav class="navbar-menu">
+
+      <!-- Menu normal -->
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./HikingTrails.html">Hiking Trails</a></li>
+        <li><a href="./Equipment.html">Equipment and Pricing</a></li>
+        <li><a href="./LocalFauna.html">Local Fauna</a></li>
+        <li><a href="./Registration.html">Hiking Registration</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button class="navbar-toggle" type="button">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+
+    <!-- Mini Menu -->
+    <nav class="navbar-mini-menu">
+      <ul class="mini-menu-options">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./HikingTrails.html">Hiking Trails</a></li>
+        <li><a href="./Equipment.html">Equipment and Pricing</a></li>
+        <li><a href="./LocalFauna.html">Local Fauna</a></li>
+        <li><a href="./Registration.html">Hiking Registration</a></li>
+      </ul>
+    </nav>
+
+    <button id="newsletter-btn">Sign Up for Newsletter</button>
+
+    <!--NewsLetter Button-->
+    <div class="newsletter-form-wrapper">
+      <button id="newsletter-close-btn">&times;</button>
+      <form id="newsletter-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+
+  </header>
+
+  <div class="table-container">
+    <h1>Recommended Hiking Equipment</h1>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Equipment Name</th>
+          <th>Features</th>
+          <th>Pros</th>
+          <th>Cons</th>
+          <th>Price Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Footwear</td>
+          <td>Hiking Boots</td>
+          <td>Waterproof, ankle support, durable sole</td>
+          <td>Good traction, protect feet and ankles, long-lasting</td>
+          <td>Heavy, need to break in, expensive</td>
+          <td>$100-$300</td>
+        </tr>
+        <tr>
+          <td>Hiking Shoes</td>
+          <td>Lightweight, breathable, comfortable</td>
+          <td>Flexible, good for day hikes, less expensive</td>
+          <td>Less ankle support, not as durable, may not be waterproof</td>
+          <td>$50-$150</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Backpacks</td>
+          <td>Internal Frame</td>
+          <td>Adjustable torso, padded straps, multiple compartments</td>
+          <td>Stable, distribute weight evenly, good for long hikes</td>
+          <td>Expensive, may be too large for shorter hikes</td>
+          <td>$150-$400</td>
+        </tr>
+        <tr>
+          <td>Daypacks</td>
+          <td>Lightweight, compact, hydration-compatible</td>
+          <td>Easy to carry, good for shorter hikes, less expensive</td>
+          <td>Less capacity, may not have enough support for heavier loads</td>
+          <td>$30-$100</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Tents</td>
+          <td>Three-Season</td>
+          <td>Lightweight, breathable, rainfly included</td>
+          <td>Good for most conditions, easy to set up, affordable</td>
+          <td>May not be suitable for extreme temperatures or heavy snowfall</td>
+          <td>$150-$500</td>
+        </tr>
+        <tr>
+          <td>Four-Season</td>
+          <td>Durable, windproof, snow stakes included</td>
+          <td>Good for winter camping, can withstand heavy snow and wind</td>
+          <td>Heavy, may be too warm for mild weather, expensive</td>
+          <td>$500-$1000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

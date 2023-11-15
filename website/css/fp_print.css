@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@page {
+  size: 8.5in 11in;
+  margin: 1in;
+}
+
+html {
+  filter: grayscale(100%);
+}
+
+header,
+#newsletter-btn {
+  display: none;
+}
+
+h1 {
+  display: block;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+form {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  border: none;
+}
+
+label {
+  page-break-after: auto;
+  display: block;
+  font-weight: bold;
+  orphans: 0;
+  widows: 0;
+  margin-bottom: 0px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  display: none;
+}
+
+textarea {
+  height: 8em;
+}
+
+h2 {
+  margin-top: 2em;
+}
+
+#date {
+  font-size: 0;
+}
+
+input[type="date"] {
+  display: none;
+}
+
+#participants {
+  display: none;
+}
+
+footer {
+  display: none;
+  page-break-after: avoid;
+}
+
+input[type="radio"] {
+  margin: 0 0;
+}
+
+input[type="checkbox"] {
+  margin: 0 0;
+}
+
+/** Page Breaks  */
+label:nth-of-type(n + 5) {
+  page-break-after: auto;
+}
+label:nth-of-type(n + 6) {
+  page-break-after: avoid;
+}
+
+h2:nth-of-type(n + 2) {
+  page-break-before: always;
+}
+
+h2:nth-of-type(n + 3) {
+  page-break-before: avoid;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
