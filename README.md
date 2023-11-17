@@ -17,20 +17,20 @@
 
 	- Navigate to Settings.
 
-	- From the General tab, select Use WSL 2 based engine..
+	- From the General tab, select Use WSL 2-based engine...
 
 	- If you have installed Docker Desktop on a system that supports WSL 2, this option is turned on by default.
 	
 	- Select Apply & Restart.
 	
-	- Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
+Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 
 ## Building a Docker Image from a Dockerfile
 
 1. **Create a Dockerfile**:
     - Create a file named `Dockerfile` in your project directory.
     - Define your environment in the Dockerfile (e.g., `FROM python:3.8`, `COPY . /app`).
-	![Dockerfile](Dockerfile.png)
+	![Dockerfile](Dockerfile.png "Example Docker File")
 
 2. **Build the Docker Image**:
     - Navigate to your project directory in the Linux distribution.
