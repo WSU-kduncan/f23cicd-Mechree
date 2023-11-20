@@ -1,5 +1,6 @@
 # CEG3120 - Project 4 Repo
 - This is a repository for Michael McCain's Project 4 milestones
+[Docker Repository](https://hub.docker.com/repository/docker/mechree/ceg3120-images/general "Docker Repository Link")
 
 # Project Overview
 - The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop.
@@ -17,20 +18,20 @@
 
 	- Navigate to Settings.
 
-	- From the General tab, select Use WSL 2 based engine..
+	- From the General tab, select Use WSL 2-based engine...
 
 	- If you have installed Docker Desktop on a system that supports WSL 2, this option is turned on by default.
 	
 	- Select Apply & Restart.
 	
-	- Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
+Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 
 ## Building a Docker Image from a Dockerfile
 
 1. **Create a Dockerfile**:
     - Create a file named `Dockerfile` in your project directory.
     - Define your environment in the Dockerfile (e.g., `FROM python:3.8`, `COPY . /app`).
-	![Dockerfile](Dockerfile.png)
+	![Dockerfile](Dockerfile.png "Example Docker File")
 
 2. **Build the Docker Image**:
     - Navigate to your project directory in the Linux distribution.
