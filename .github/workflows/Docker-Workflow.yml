@@ -11,3 +11,9 @@ jobs:
         run: sudo apt install fortune
       - name: get-fortune
         run: fortune
+      - name: Show-files
+        run: ls
+      - name: Get-repo-contents
+        uses: actions/checkout@v3
+      - name: Post checkout
+        run: ls
