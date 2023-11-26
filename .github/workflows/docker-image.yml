@@ -9,7 +9,7 @@ on:
     branches: [ "main" ]
 
 # Jobs group a set of actions that will be executed if the event is triggered
-jobs: Project 4 Image
+jobs:
   build_and_push:
     runs-on: ubuntu-latest
     steps:
