@@ -79,7 +79,7 @@ Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 
 **_NOTE:_** To add multiple images, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
 
-	- **Name your local images using one of these methods:**
+- **Name your local images using one of these methods:**
 	* When you build them, using `docker build -t <hub-user>/<repo-name>[:<tag>]`
 	* By re-tagging the existing local image with `docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
 			
@@ -133,7 +133,7 @@ GitHub Secrets Guide: [GitSecrets](https://docs.github.com/en/actions/security-g
 
 ### Purpose
 - The purpose of GitHub Workflows is to automate the development process and eliminate tedious tasks among a development team. 
-- A workflow will use **Actions* to perform a defined task when an **event** is triggered. 
+- A workflow will use a group of defined **Actions** to perform a defined task when an **event** is triggered. 
 
 ### Custome Variables
 - Some of the custom variables that would need to be edited if others were to reuse the file are:
