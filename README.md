@@ -74,18 +74,19 @@ Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 
 ### Step 3: Push an Image to Your Repository
 
-** Pushing an Image **
-		- To push an image to Docker Hub, you must first name your local image using your Docker ID and the repository name that you created.
-		- If you want to add multiple images to a repository, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
+**Pushing an Image**
+- To push an image to Docker Hub, you must first name your local image using your Docker ID and the repository name that you created.
 
-		- Name your local images using one of these methods:
-			*When you build them, using `docker build -t <hub-user>/<repo-name>[:<tag>]`
-			* By re-tagging the existing local image with `docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
+- If you want to add multiple images to a repository, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
+
+- Name your local images using one of these methods:
+	* When you build them, using `docker build -t <hub-user>/<repo-name>[:<tag>]`
+	* By re-tagging the existing local image with `docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
 			
-			* By using `docker commit <existing-container> <hub-user>/<repo-name>[:<tag>` to commit changes.
+	* By using `docker commit <existing-container> <hub-user>/<repo-name>[:<tag>` to commit changes.
 		
-		- Then, you can push this image to the repository designated by its name or tag:
-			* `docker push <hub-user>/<repo-name>:<tag>`
+- Then, you can push this image to the repository designated by its name or tag:
+	* `docker push <hub-user>/<repo-name>:<tag>`
 ### Step 4: Verify the Repository
 
 1. Go back to your DockerHub account.
@@ -98,6 +99,7 @@ DH New Repo and Push Guide: [DH Repo Guide](https://docs.docker.com/docker-hub/r
 
 ### Step 1: Login using CLI and Tokens
 - Use the command line to login into docker with `docker login`. Follow the prompts to enter a username and password. 
+
 **_NOTE:_** Set the correct privileges for the user via the command `sudo usermod -aG docker USERNAME`
 
 - Alternatively a DockerHub token can be used `docker login --username YOUR_USERNAME`
@@ -105,10 +107,10 @@ DH New Repo and Push Guide: [DH Repo Guide](https://docs.docker.com/docker-hub/r
 
 Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-developers/access-tokens/)
 
-### Step 1: Tag the Docker Image
+### Step 2: Tag the Docker Image
 - `docker tag <local-image>:<tag> <dockerhub-username>/<repository-name>:<tag>`
 
-### Step 2: Push Image to DockerHub
+### Step 3: Push Image to DockerHub
 - `docker push <dockerhub-username>/<repository-name>:<tag>`
 
 ## Configuring GitHub Secrets
