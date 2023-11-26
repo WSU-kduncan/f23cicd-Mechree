@@ -77,7 +77,7 @@ Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 **Pushing an Image**
 1. Name your local image using your Docker ID and the repository name that you created.
 
-- To add multiple images, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
+**_NOTE:_** To add multiple images, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
 
 	- **Name your local images using one of these methods:**
 	* When you build them, using `docker build -t <hub-user>/<repo-name>[:<tag>]`
@@ -127,4 +127,16 @@ Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-develope
 4. Select **New repository secret** which is displayed to the right of the **Repository Secrets** section.
 5. From there, fill out the desired name and secret information. 
 
-GitHub Secrets Guide :[GitSecrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+GitHub Secrets Guide: [GitSecrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+
+## Behavior of Github Workflow
+
+### Purpose
+- The purpose of GitHub Workflows is to automate the development process and eliminate tedious tasks among a development team. 
+- A workflow will use **Actions* to perform a defined task when an **event** is triggered. 
+
+### Custome Variables
+- Some of the custom variables that would need to be edited if others were to reuse the file are:
+	* Docker Username and Docker Password secrets
+	* Defined Docker Namespace and Repository
+	* Latest version of OS that the project runs on
