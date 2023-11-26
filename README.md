@@ -75,17 +75,17 @@ Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 ### Step 3: Push an Image to Your Repository
 
 **Pushing an Image**
-- To push an image to Docker Hub, you must first name your local image using your Docker ID and the repository name that you created.
+1. Name your local image using your Docker ID and the repository name that you created.
 
-- If you want to add multiple images to a repository, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
+- To add multiple images, add a specific :<tag> to them, for example docs/base:testing. If it's not specified, the tag defaults to latest.
 
-- Name your local images using one of these methods:
+	- **Name your local images using one of these methods:**
 	* When you build them, using `docker build -t <hub-user>/<repo-name>[:<tag>]`
 	* By re-tagging the existing local image with `docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
 			
-	* By using `docker commit <existing-container> <hub-user>/<repo-name>[:<tag>` to commit changes.
+	* By using `docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]` to commit changes.
 		
-- Then, you can push this image to the repository designated by its name or tag:
+2. Then, you can push this image to the repository designated by its name or tag:
 	* `docker push <hub-user>/<repo-name>:<tag>`
 ### Step 4: Verify the Repository
 
@@ -115,3 +115,16 @@ Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-develope
 
 ## Configuring GitHub Secrets
 
+### Secrets for this Guide
+1. Docker_Username: contains the username for the dockerhub login.
+2. Docker_Password: contains the password for the associated dockerhub username
+
+### How to Configure a Secret
+1. Navigate to the repository.
+2. Click settings in the top right of the github tool bar and select **settings**
+.
+3. On the left, scroll down to **security** open up **Secrets and variables** and select **Actions**.
+4. Select **New repository secret** which is displayed to the right of the **Repository Secrets** section.
+5. From there, fill out the desired name and secret information. 
+
+GitHub Secrets Guide :[GitSecrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
