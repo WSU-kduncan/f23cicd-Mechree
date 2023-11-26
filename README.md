@@ -116,8 +116,8 @@ Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-develope
 ## Configuring GitHub Secrets
 
 ### Secrets for this Guide
-1. Docker_Username: contains the username for the dockerhub login.
-2. Docker_Password: contains the password for the associated dockerhub username
+1. **Docker_Username:** contains the username for the dockerhub login.
+2. **Docker_Password:** contains the password for the associated dockerhub username
 
 ### How to Configure a Secret
 1. Navigate to the repository.
