@@ -131,6 +131,10 @@ GitHub Secrets Guide: [GitSecrets](https://docs.github.com/en/actions/security-g
 
 ## Behavior of Github Workflow
 
+Workflow Docker Guide: [Build/Push DockerHub Guide](https://github.com/marketplace/actions/build-and-push-docker-images)
+
+Managing Tags w/ Docker Guide: [Docker Tags Guide](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/)
+
 ### Purpose
 - The purpose of GitHub Workflows is to automate the development process and eliminate tedious tasks among a development team. 
 - A workflow will use a group of defined **Actions** to perform a defined task when an **event** is triggered. 
