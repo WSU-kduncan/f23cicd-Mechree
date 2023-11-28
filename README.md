@@ -42,6 +42,7 @@ Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 
 1. **Run the Docker Container**:
     - Run the container: `docker run -dit --name desired-name -p 80:80 container-name`
+
 **_NOTE:_** Host Port comes first, then Container Port
 
 ## Viewing the Project Running in the Container
@@ -126,7 +127,10 @@ Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-develope
 .
 3. On the left, scroll down to **security** open up **Secrets and variables** and select **Actions**.
 4. Select **New repository secret** which is displayed to the right of the **Repository Secrets** section.
-5. From there, fill out the desired name and secret information. 
+5. From there, fill out the desired name and secret information.
+
+![Workflow Secrets](Secrets.png "Example Serets Configuration")
+ 
 
 GitHub Secrets Guide: [GitSecrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
 
