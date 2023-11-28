@@ -36,12 +36,13 @@ Guide: [Docker WSL Install](https://docs.docker.com/desktop/wsl/)
 
 2. **Build the Docker Image**:
     - Navigate to your project directory in the Linux distribution.
-    - Run: `docker build -t container-name .`
+    - Run: `docker build -t container-name:tag .`
 
 ## Running a Docker Container
 
 1. **Run the Docker Container**:
     - Run the container: `docker run -dit --name desired-name -p 80:80 container-name`
+**_NOTE:_** Host Port comes first, then Container Port
 
 ## Viewing the Project Running in the Container
 
