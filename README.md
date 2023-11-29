@@ -143,8 +143,15 @@ Managing Tags w/ Docker Guide: [Docker Tags Guide](https://docs.docker.com/build
 ### Purpose
 - The purpose of GitHub Workflows is to automate the development process and eliminate tedious tasks among a development team. 
 - A workflow will use a group of defined **Actions** to perform a defined task when an **event** is triggered. 
+- The workflow for this project will automate the process of pushing an image to my public DockerHub repository when I push to the main branch of my GitHub repository. 
 
-### Custome Variables
+**_Workflow Process_**
+	- On push/pull to main GitHub branch 
+		* Login to DockerHub using defined username/password GitHub Secrets
+		* Extract tags from the repository
+		* build and push the image to DockerHub
+
+### Custom Variables
 - Some of the custom variables that would need to be edited if others were to reuse the file are:
 	* Docker Username and Docker Password secrets
 	* Defined Docker Namespace and Repository
