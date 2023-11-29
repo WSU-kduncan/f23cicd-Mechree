@@ -146,10 +146,10 @@ Managing Tags w/ Docker Guide: [Docker Tags Guide](https://docs.docker.com/build
 - The workflow for this project will automate the process of pushing an image to my public DockerHub repository when I push to the main branch of my GitHub repository. 
 
 **_Workflow Process_**
-	- On push/pull to main GitHub branch 
-		* Login to DockerHub using defined username/password GitHub Secrets
-		* Extract tags from the repository
-		* build and push the image to DockerHub
+- On push/pull to main GitHub branch 
+	* Login to DockerHub using defined username/password GitHub Secrets
+	* Extract tags from the repository
+	* build and push the image to DockerHub
 
 ### Custom Variables
 - Some of the custom variables that would need to be edited if others were to reuse the file are:
