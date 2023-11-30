@@ -156,3 +156,7 @@ Managing Tags w/ Docker Guide: [Docker Tags Guide](https://docs.docker.com/build
 	* Docker Username and Docker Password secrets
 	* Defined Docker Namespace and Repository
 	* Latest version of OS that the project runs on
+
+# Diagram of GitHub Workflow and Actions with DockerHub
+
+![Workflow/Actions](IntegrationDiagram.png "GitHub Workflow and Actions")
