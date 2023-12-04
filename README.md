@@ -4,7 +4,7 @@
 Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/docker/mechree/ceg3120-images/general "Docker Repository Link")
 
 # Project Overview
-- The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop on the command line, implementing and practice versioning, and to use webhooks.
+- The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop on the command line, implementing and practice versioning, the use of webhooks, and AWS.
 
 # Docker Setup and Usage Guide on Windows Subsystem for Linux 2 (WSL2)
 
@@ -134,8 +134,8 @@ Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-develope
 
 GitHub Secrets Guide: [GitSecrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
 ## GitHub Tags ##
-- to push a tag use the command in your repo 'git push origin <tag>'
-- to generate a tag on the current branch use 'git tag <tagname>'. To do the same with an annotation use 'git tag -a <tagname> -m "Message"'
+- to push a tag use the command in your repo `git push origin <tag>`
+- to generate a tag on the current branch use `git tag <tagname>`. To do the same with an annotation use `git tag -a <tagname> -m "Message"`
 **_NOTE_** You must must push your tags after creating them on your local version of the repo. 
 
 ## Behavior of Github Workflow
