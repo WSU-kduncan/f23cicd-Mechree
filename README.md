@@ -4,7 +4,7 @@
 Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/docker/mechree/ceg3120-images/general "Docker Repository Link")
 
 # Project Overview
-- The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop.
+- The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop on the command line, implementing and practice versioning, and to use webhooks.
 
 # Docker Setup and Usage Guide on Windows Subsystem for Linux 2 (WSL2)
 
@@ -133,6 +133,10 @@ Dockerhub Token Guide: [DH Tokens](https://docs.docker.com/security/for-develope
  
 
 GitHub Secrets Guide: [GitSecrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+## GitHub Tags ##
+- to push a tag use the command in your repo 'git push origin <tag>'
+- to generate a tag on the current branch use 'git tag <tagname>'. To do the same with an annotation use 'git tag -a <tagname> -m "Message"'
+**_NOTE_** You must must push your tags after creating them on your local version of the repo. 
 
 ## Behavior of Github Workflow
 
@@ -143,13 +147,13 @@ Managing Tags w/ Docker Guide: [Docker Tags Guide](https://docs.docker.com/build
 ### Purpose
 - The purpose of GitHub Workflows is to automate the development process and eliminate tedious tasks among a development team. 
 - A workflow will use a group of defined **Actions** to perform a defined task when an **event** is triggered. 
-- The workflow for this project will automate the process of pushing an image to my public DockerHub repository when I push to the main branch of my GitHub repository. 
+- The workflow for this project will automate the process of pushing an image to my public DockerHub repository when I push/pull to the main branch of my GitHub repository or update the version. 
 
-**_Workflow Process_**
-- On push/pull to main GitHub branch 
+**_Workflow Process/Behavior_**
+- On push/pull to main GitHub branch or version change
 	* Login to DockerHub using defined username/password GitHub Secrets
 	* Extract tags from the repository
-	* build and push the image to DockerHub
+	* build and push the image to DockerHub with extracted tags and labels
 
 ### Custom Variables
 - Some of the custom variables that would need to be edited if others were to reuse the file are:
