@@ -5,7 +5,8 @@ name: Build and Push Docker Image
 on:
   push:
     branches: [ "main" ]
-    tags: - v*
+    tags:
+      - v*
   pull_request:
     branches: [ "main" ]
 # Jobs group a set of actions that will be executed if the event is triggered
