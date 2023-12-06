@@ -30,6 +30,8 @@ jobs:
           images: mechree/ceg3120-images
           tags: | 
             type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
       - name: Say Tags and Labels
         run: |
           echo "tags: ${{ steps.meta.outputs.tags }}"
