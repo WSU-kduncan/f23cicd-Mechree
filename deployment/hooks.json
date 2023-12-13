@@ -1,0 +1,9 @@
+[
+  {
+    "id": "webhook",
+    "execute-command": "/home/ec2-user/webhooks/my-site/deploy.sh",
+    "command-working-directory": "/home/ec2-user/go",
+    "response-message": "Executing deploy script..."
+  }
+]
+

@@ -18,3 +18,39 @@ Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/doc
 	* Extract tags from the repository
 	* build and push the image to DockerHub with extracted tags and labels
 
+## How to install Docker
+- `sudo yum install -y docker`
+- `sudo usermod -a -G docker ec2-user`
+- `id ec2-user`
+- `newgrp docker`
+
+## Container Restart Script
+- The container restart script will stop the active container, remove the container and the image, and then pull, and run the updated images from DockerHub. 
+- It is used for automating the process of updating a Docker container when a new version of an image is released.
+- This script can be located in an easily identifiable folder titled "Scripts" or in the home directory, but for this project it is located in '/home/ec2-user/webhooks/my-site'. 
+
+## Setting up a webhook
+### Installing Adnah's Webhooks
+- `sudo yum install -y golang`
+- `echo 'export GOPATH=$HOME/go' >> ~/.bash_profile`
+- `echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bash_profile`
+- `source ~/.bash_profile`
+- `go install github.com/adnanh/webhook:latest`
+- `mkdir ~/webhooks`
+- `cd webhooks`
+- `touch hooks.json`
+
+### How to Start the Webhooks
+- `webhook -hooks /path/to/your/hooks.json -verbose`
+- To ensure a webhook is automatically restarted after a system restart create a webhooks.service file.
+
+### What is a webhook?
+- A webhook is a "listener" program that uses http communication to trigger events and execute defined commands on the server running it. 
+- On my AWS linux system the webhook folder location is in `/home/ec2-user/webhooks`
+
+### Dockerhub Webhook Setup
+- Go to the your repository on DockerHub's website.
+- Click the "Webooks" tab
+- Name the webhook and enter the url (ip:port/hooks/webhook)
+
+
