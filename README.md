@@ -53,4 +53,6 @@ Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/doc
 - Click the "Webooks" tab
 - Name the webhook and enter the url (ip:port/hooks/webhook)
 
+### GitHub Webhook Setup
+- Placeholder
 
