@@ -6,7 +6,7 @@ on:
   push:
     branches: [ "main" ]
     tags:
-      - v*
+      - "v*.*.*"
   pull_request:
     branches: [ "main" ]
 # Jobs group a set of actions that will be executed if the event is triggered
