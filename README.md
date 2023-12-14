@@ -4,7 +4,7 @@
 Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/docker/mechree/ceg3120-images/general "Docker Repository Link")
 
 # Project Overview
-- The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop on the command line, implementing and practice versioning, the use of webhooks, and AWS.
+- The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop on the command line, implementing and practice versioning, and the use of webhooks for continuous deployment with AWS.
 
 ![Project5process](Project5.png "process")
 
@@ -21,15 +21,32 @@ Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/doc
 	* build and push the image to DockerHub with extracted tags and labels
 
 ## How to install Docker
-- `sudo yum install -y docker`
-- `sudo usermod -a -G docker ec2-user`
-- `id ec2-user`
-- `newgrp docker`
-
+```
+sudo yum install -y docker
+sudo usermod -a -G docker ec2-user
+id ec2-user
+newgrp docker
+```
 ## Container Restart Script
 - The container restart script will stop the active container, remove the container and the image, and then pull, and run the updated images from DockerHub. 
 - It is used for automating the process of updating a Docker container when a new version of an image is released.
 - This script can be located in an easily identifiable folder titled "Scripts" or in the home directory, but for this project it is located in '/home/ec2-user/webhooks/my-site'. 
+
+```
+#! /bin/bash
+## Stop/ remove container
+docker kill hiking
+docker remove hiking
+
+##once dead and removed, the image it references can be removed
+docker image rm mechree/ceg3120-images:hiking
+
+## Docker Pull Imagename
+docker pull -a mechree/ceg3120-images:hiking
+
+## run container
+docker run -d -p 80:80 --name hiking --restart unless-stopped mechree/ceg3120-images:hiking
+```
 
 ## Setting up a webhook
 ### Installing Adnah's Webhooks
