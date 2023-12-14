@@ -6,6 +6,8 @@ Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/doc
 # Project Overview
 - The purpose of this project to is to become familair with creating and utilizing containers using the software Docker Desktop on the command line, implementing and practice versioning, the use of webhooks, and AWS.
 
+![Project5process](Project5.png "process")
+
 ## GitHub Tags
 - to push a tag use the command in your repo `git push origin <tag>`
 - to generate a tag on the current branch use `git tag <tagname>`. To do the same with an annotation use `git tag -a <tagname> -m "Message"`
@@ -31,15 +33,16 @@ Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/doc
 
 ## Setting up a webhook
 ### Installing Adnah's Webhooks
-- `sudo yum install -y golang`
-- `echo 'export GOPATH=$HOME/go' >> ~/.bash_profile`
-- `echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bash_profile`
-- `source ~/.bash_profile`
-- `go install github.com/adnanh/webhook:latest`
-- `mkdir ~/webhooks`
-- `cd webhooks`
-- `touch hooks.json`
-
+```
+sudo yum install -y golang
+echo 'export GOPATH=$HOME/go' >> ~/.bash_profile
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bash_profile
+source ~/.bash_profile
+go install github.com/adnanh/webhook:latest
+mkdir ~/webhooks
+cd webhooks
+touch hooks.json
+```
 ### How to Start the Webhooks
 - `webhook -hooks /path/to/your/hooks.json -verbose`
 - To ensure a webhook is automatically restarted after a system restart create a webhooks.service file.
@@ -52,7 +55,17 @@ Docker Repo: [Mechree's Docker Repository](https://hub.docker.com/repository/doc
 - Go to the your repository on DockerHub's website.
 - Click the "Webooks" tab
 - Name the webhook and enter the url (ip:port/hooks/webhook)
-
-### GitHub Webhook Setup
-- Placeholder
+- The hooks.json file should look like this:
+```
+[
+  {
+    "id": "webhook",
+    "execute-command": "/home/ec2-user/webhooks/my-site/deploy.sh",
+    "command-working-directory": "/home/ec2-user/go",
+    "response-message": "Executing deploy script..."
+  }
+]
+```
+- The above hooks.json file is naming the webhook, execuing the deploy.sh script, using the "go" directory, and displaying a message in the browser that it is executing.
+- For the purpose of this project the location of this file is in `/home/ec2-user/webhooks/my-site`
 
